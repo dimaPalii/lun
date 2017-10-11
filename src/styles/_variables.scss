@@ -1,0 +1,16 @@
+/*
+* _variables.scss
+*/
+
+$font-stack:           'Open Sans', sans-serif;
+
+$color-primary:        #ff9800 !default;
+
+$color-placeholder:    #bbbbbb  !default;
+$color-label:          #525252  !default;
+$color-error:          #ff0000  !default;
+
+$tablet:               '(min-width: 768px)';
+$desktop:              '(min-width: 992px)';
+$extra-desktop:        '(min-width: 1200px)';
+$extra-big-desktop:    '(min-width: 1436px)';
