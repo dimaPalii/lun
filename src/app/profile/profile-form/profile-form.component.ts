@@ -149,7 +149,7 @@ export class ProfileFormComponent implements OnInit {
       this.profileData = {
         'name': this.profileForm.value.general.name,
         'email': this.profileForm.value.general.email,
-        'address': this.getCountryNameById(this.profileForm.value.location.country) + ', ' + this.getCityById(this.profileForm.value.location.city).name,
+        'address': this.getCountryNameById(this.profileForm.value.location.country) + ', ' + this.getCityById(this.profileForm.value.location.city),
         'social': this.getSocialForDisplay(this.profileForm.value.social),
         'pet': this.profileForm.value.favorite.pet
       };
@@ -297,8 +297,8 @@ export class ProfileFormComponent implements OnInit {
       return this.countries[id];
     }
 
-    private getCityById(id: number|string): any {
-      return this.cities[id];
+    private getCityById(city: number|string): any {
+      return this.isCountryCitiesPresented ? this.cities[city]['name'] : city;
     }
 
   }
